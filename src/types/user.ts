@@ -1,12 +1,16 @@
 export interface User {
-  _id: string;
+  _id?: string;
   username: string;
   email: string;
-  password: string; // hashed password
+  password?: string;
   role: 'customer' | 'admin';
-  createdAt: Date;
-  updatedAt: Date;
+  full_name?: string;
+  phone?: string;
+  address?: string;
+  avatar_url?: string;
+  createdAt?: Date;
+  updatedAt?: Date;
   lastLogin?: Date;
-  isActive: boolean;
-  isDeleted: boolean;
+  isActive?: boolean;
+  isDeleted?: boolean;
 }

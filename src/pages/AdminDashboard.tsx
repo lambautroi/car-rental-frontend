@@ -1,11 +1,15 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Sidebar from '../components/admin/Sidebar';
+import '../styles/Admin.css';
 
 const AdminDashboard: React.FC = () => {
     return (
-        <div>
-            <h1>Admin Dashboard</h1>
-            <p>Welcome to the admin dashboard. Here you can manage vehicles, bookings, and payments.</p>
-            {/* Additional admin functionalities can be added here */}
+        <div className="admin-dashboard">
+            <Sidebar />
+            <div className="admin-content">
+                <Outlet />
+            </div>
         </div>
     );
 };
